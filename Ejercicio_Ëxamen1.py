@@ -127,6 +127,27 @@ while True:
             busqueda_precio(p_min, p_max)
 
         elif opcion == 3:
-            
+            codigo = input("Ingrese codigo: ")
+            precio = int(input("Ingrese precio nuevo: "))
+            resultado = actualizar_precio(codigo, precio)
+            if resultado:
+                print("Precio actualizado con exito!!")
+            else:
+                print("El codigo no existe")
 
-        
+        elif opcion == 4:
+            codigo = input("Ingrese codigo")
+            buscar_objeto(codigo)
+
+        elif opcion == 5:
+            mostrar_todo()
+
+        elif opcion == 6:
+            print("Saliendo del programa...")
+            break
+
+        else:
+            print("Opcion no valida, intente con un numero del 1 al 6")
+
+    except ValueError:
+        print("Error!! Debe ingresar un numero entero valido")
